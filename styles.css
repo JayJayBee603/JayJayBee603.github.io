@@ -1,0 +1,229 @@
+/* Global Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2e0bb; /* Light pink background */
+    color: #333;
+  }
+  
+  /* Header */
+  header {
+    background-color: #fffcf3; 
+    color: #fff;
+    padding: 2em;
+    text-align: center;
+    position: relative;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  header .logo {
+    width: 120px;
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    border-radius: 50%;  /* Circle logo */
+    box-shadow: 0px 0px 8px rgba(255, 0, 127, 0.6); /* Pink glow */
+  }
+  
+  h1 {
+    font-family: 'Cursive', sans-serif;
+    color: #d48996; /* Deep pink */
+    font-size: 3rem;
+    margin-bottom: 0.5em;
+    text-shadow: 2px 2px 4px #a51e3488;
+    
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+  }
+  
+  nav a {
+    color: #292929; /* Deep pink */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.8em 1.2em;
+    border-radius: 30px;  /* Softer round buttons */
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  nav a:hover {
+    background-color: #f2e0bb; /* Pink background on hover */
+    color: #fff;
+  }
+  
+  /* Main Section */
+  main {
+    padding: 0em;
+    
+  }
+  .parallax {
+    background-image: url("img_parallax.jpg");
+    position: relative; /* Ensures the section behaves as expected */
+    height: 800px; /* Defines the section height */
+    background-attachment: fixed; /* This is the key for parallax effect */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.parallax .parallax-section{
+  background-color:transparent;
+}
+
+.hero-text {
+    z-index: 1; /* Ensures it stays on top of the background */
+    padding: 1em;
+    border-radius: 10px;
+    
+}
+.testimonials{
+  background-color: #fffcf3;
+}
+  section {
+    background-color: #f2e0bb; /* Blonde background */
+    height: 250px;
+    text-align: center;
+    margin: auto;
+    
+  }
+  section.hero {
+    background-color: #f2e0bb; /* Blonde background */
+    height: 500px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: auto;
+    
+  }
+  section.bio {
+    background-color: #f2e0bb; /* Blonde background */
+    height: 500px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+    border-color: black;
+    margin: auto;
+    padding: 5%;
+    
+  }
+  section:hover {
+    transform: scale(1.0);  /* Slightly expand on hover */
+  }
+  
+  /* Form Styling */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input, textarea {
+    padding: 0.7em;
+    border: 2px solid #ff007f;
+    border-radius: 15px; /* Softer curves */
+    transition: box-shadow 0.3s ease;
+  }
+  
+  input:focus, textarea:focus {
+    outline: none;
+    box-shadow: 0px 0px 10px rgba(255, 0, 127, 0.5); /* Pink shadow */
+  }
+  
+  button {
+    background-color: #d48996; /* Pink */
+    color: #fff;
+    padding: 0.7em;
+    border: none;
+    border-radius: 25px; /* More rounded button */
+    font-size: 1em;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(245, 142, 194, 0.3);
+    transition: transform 0.2s ease, background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #d67888; /* Deep red on hover */
+    transform: scale(1.05);
+  }
+  
+  /* Service Styling */
+  .service {
+    background-color: #fffcf3; /* Blonde tone */
+    padding: 1.5em;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 1.5em;
+    border-radius: 20px; /* More rounded corners */
+    border: 2px solid #ff007f;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .service:hover {
+    color: #292929;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Glow effect */
+  }
+  
+  .service h3 {
+    margin-bottom: 0.5em;
+  }
+  
+  /* CSS to hide the details initially and slide down when open */
+  .details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+  }
+  
+  .details.open {
+    max-height: 700px; /* Adjust this value as needed to fit your content */
+  }
+  
+  /* Style for the 'Book Now' button */
+  .service button {
+    background-color: #d48996; /* Deep red color */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Change color on hover */
+  .service button:hover {
+    background-color: #d67888; /* Slightly darker red on hover */
+    transform: scale(1.05);
+  }
+  
+  /* Slide-in Effect */
+  section {
+    opacity: 1;
+    transform: none;
+  }
+  
+  section.appear {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  footer {
+    text-align: center;
+  }
